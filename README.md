@@ -8,7 +8,7 @@ Dive into the data job market! This project explores data analyst roles, focusin
 
 ## 🎯 Background
 
-As someone learning data analytics, I wanted to understand which technical skills employers value and which skills are associated with higher salaries.
+As someone learning data analytics living in Japan, I wanted to understand which technical skills employers value and which skills are associated with higher salaries. I went further ahead and only grabbed data for jobs that are either remote or in Japan.
 
 This project uses SQL to answer four key questions:
 
@@ -56,8 +56,8 @@ LIMIT 10;
 ```
 
 
-![Top-Paying Roles](MAKE IMAGE)
-*Bar graph visualizing the salary for the top 10 salaries for data analysts.*
+![Top-Paying Roles](assets/Average%20Salary%20Distribution%20of%20Top%20Data%20Analyst%20Jobs.png)
+*Bar graph visualizing the salary for the top 10 salaries for data analysts; ChatGPT generated this graph from my SQL query results*
 
 ### 2. Skills Required for Top-Paying Jobs
 
@@ -92,8 +92,8 @@ INNER JOIN skills_dim ON skills_job_dim.skill_id = skills_dim.skill_id
 ORDER BY
     salary_year_avg DESC
 ```
-
-![Top-Paying Job Skills](MAKE IMAGE)
+![Top-Paying Job Skills](assets/top_paying_job_skill_counts.png)
+*Bar graph visualizing the top skills for Data Analyst; ChatGPT generated this graph from my SQL query results*
 
 ### 3. Most In-Demand Skills
 
@@ -114,8 +114,16 @@ ORDER BY
     demand_count DESC
 LIMIT 5;
 ```
+| Skills | Demand Count |
+| :--- | :--- |
+| SQL | 7346 |
+| Excel | 4638 |
+| Python | 4375 |
+| Tableau | 3772 |
+| Power BI | 2623 |
+*Table of the demand for the top 5 skills in data analyst job postings*
 
-![Most In-Demand Skills](MAKE IMAGE)
+
 
 ### 4. Highest-Paying Skills
 Calculated average yearly salaries by skill. PySpark ranked first in the results at approximately **$208,172**, followed by Bitbucket at approximately **$189,155**.
@@ -137,8 +145,20 @@ ORDER BY
 LIMIT 25;
 ```
 
+| Skills | Avg Salary |
+| :--- | :--- |
+| pyspark | $208,172 |
+| bitbucket | $189,155 |
+| couchbase | $160,515 |
+| watson | $160,515 |
+| datarobot | $155,486 |
+| gitlab | $154,500 |
+| swift | $153,750 |
+| jupyter | $152,777 |
+| pandas | $151,821 |
+| elasticsearch | $145,000 |
 
-![Highest-Paying Skills](MAKE IMAGE)
+*Table of the top 10 highest-paying skills based on average salary*
 
 ### 5. Optimal Skills
 
@@ -196,7 +216,20 @@ ORDER BY
     demand_count DESC
 LIMIT 25;
 ```
-![Optimal Skills](MAKE IMAGE)
+| Skills | Demand Count | Avg Salary |
+| :--- | :--- | :--- |
+| go | 27 | $115,320 |
+| confluence | 11 | $114,210 |
+| snowflake | 37 | $112,948 |
+| hadoop | 23 | $111,715 |
+| azure | 34 | $111,225 |
+| bigquery | 13 | $109,654 |
+| aws | 33 | $107,435 |
+| java | 17 | $106,906 |
+| ssis | 12 | $106,683 |
+| jira | 20 | $104,918 |
+
+*Table of the top 10 skills by average salary*
 
 ## 📚 What I Learned
 
